@@ -3,10 +3,14 @@ func solution(string: String ){
     let arrayLetter = string.split(separator: "")
     
     for letter in arrayLetter{
-        if letter.isCased{
-            
+        let letterString = String(letter)
+        if letterString == letterString.uppercased(){
+            resultString = "\(resultString) \(letterString)"
+        } else {
+            resultString = "\(resultString)\(letterString)"
         }
     }
+    print(resultString)
 }
 
 solution(string: "camelCasing")
